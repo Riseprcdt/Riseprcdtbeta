@@ -2250,20 +2250,6 @@ footer *,
 
 /* ===== ETC SECTION FIX ===== */
 
-.nav_02 a,
-.nav_02 a span,
-.nav_02 a strong,
-.nav_02 a em{
-
-    color:#ffffff !important;
-    -webkit-text-fill-color:#ffffff !important;
-
-    background:none !important;
-    background-image:none !important;
-
-    opacity:1 !important;
-    visibility:visible !important;
-}
 
 /* FOOTER FORCE FIX */
 
@@ -2306,21 +2292,52 @@ html::-webkit-scrollbar{
     display:none;
 }
 
-.nav_01 a,
-.nav_01 a span,
-.nav_01 a strong,
-.nav_01 a em{
 
-    color:#ffffff !important;
-    -webkit-text-fill-color:#ffffff !important;
+.nav_01,
+.nav_02 {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 
-    background:none !important;
-    background-image:none !important;
+    background: transparent;
+    border: none;
 
-    opacity:1 !important;
-    visibility:visible !important;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
 }
 
+.nav_01 a,
+.nav_02 a {
+    position: relative;
+    color: rgba(255,255,255,.75);
+    transition: .3s;
+}
+
+.nav_01 a:hover,
+.nav_02 a:hover {
+    color: #fff;
+}
+
+.nav_01 a::after,
+.nav_02 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: .3s;
+}
+
+.nav_01 a:hover::after,
+.nav_02 a:hover::after {
+    width: 100%;
+}
 
 
 </style>
